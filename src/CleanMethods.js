@@ -5,7 +5,7 @@ import axios from "axios";
 
 
 
-const BASE_URL = "https://swdv-project.herokuapp.com/api/"
+ export const BASE_URL = "https://3.131.75.119:5000"
 // const TOKEN ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxODJmOTZjMmJlNDMyNWVkZmY5MzU5NCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzNzI4OTc4OCwiZXhwIjoxNjM3NTQ4OTg4fQ._HEN89nLQmK9syeB8EdTE2bMyeKUydQXIUOMicqLewA"
 
 const user = JSON.parse(localStorage.getItem("persist:root"))?.user;
