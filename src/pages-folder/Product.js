@@ -7,7 +7,7 @@ import Footer from '../components-folder/Footer';
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
 import { mobile } from '../responsive';
-import { infoRequests } from '../CleanMethods';
+import { infoRequests, BASE_URL } from '../CleanMethods';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useLocation } from 'react-router';
@@ -150,7 +150,7 @@ const Product = () => {
         const findProduct = async ()=>{
 
             try{
-                const res = await infoRequests.get("/products/find/" + key);
+                const res = await axios.get(BASE_URL + "products/find/" + key);
                 setStateProduct(res.data);
             }catch{console.log("err")}
 
