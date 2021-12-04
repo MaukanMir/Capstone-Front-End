@@ -44,31 +44,30 @@ const Option = styled.option``;
 const ProductList = () => {
     const location = useLocation();
 
-    let categorySnipe = location.pathname.split("/")[2];;
-    const [itemFinder, setitemFinder] = useState({})
-    const [displayedData, setdisplayedData] = useState("latest");
-    
-    console.log(categorySnipe)
-    const displayFinder = (e) =>{
-        const value = e.target.value;
 
-        setitemFinder({
-            ...itemFinder,
-            [e.target.name]: value,
-        });
-    }
 
-   
+    const cat = location.pathname.split("/")[2];
+    const [filters, setFilters] = useState({});
+    const [sort, setSort] = useState("newest");
+
+
+    const handleFilters = (e) => {
+    const value = e.target.value;
+    setFilters({
+      ...filters,
+      [e.target.name]: value,
+    });
+  };
 
 
     return (
         <Container>
             <Annoumcement />
             <Navbar />
-            <Title>{categorySnipe}</Title>
+            <Title>{cat}</Title>
             <FilterContainer>
                 <Filter><FilterText> Find the right styles: </FilterText>
-                <Select name ="color" onChange = {displayFinder}>
+                <Select name ="color" onChange = {handleFilters}>
                 <Option disabled >Color</Option>
                 <Option>white</Option>
                 <Option>black</Option>
@@ -77,7 +76,7 @@ const ProductList = () => {
                 <Option>yellow</Option>
                 <Option>green</Option> 
             </Select>
-            <Select name ="size" onChange = {displayFinder}>
+            <Select name ="size" onChange = {handleFilters}>
             <Option disabled >Size</Option>
             <Option>XS</Option>
             <Option>S</Option>
@@ -88,14 +87,14 @@ const ProductList = () => {
           </Filter>
                 <Filter> 
                 <FilterText>Organize by Feature:</FilterText>
-            <Select onChange ={(e) => setdisplayedData(e.target.value)}>
+            <Select onChange ={(e) => setSort(e.target.value)}>
             <Option value ="latest">Latest</Option>
             <Option value ="highest">Price ( Highest )</Option>
             <Option value ="lowest">Price ( Lowest )</Option>
           </Select>
                 </Filter>
             </FilterContainer>
-            <Products categorySnipe ={categorySnipe} itemFinder ={itemFinder} displayedData ={displayedData} />
+            <Products cat={cat} filters={filters} sort={sort}/>
             <Newsletter />
             <Footer />
         </Container>

@@ -14,65 +14,60 @@ display: flex;
 flex-wrap: wrap;
 justify-content: space-between;
 `;
-const Products = ({ categoreySnipe, itemFinder, displayedData }) => {
+const Products = ({  cat, filters, sort }) => {
 
-    const [productMatch,setProductMatch] = useState([]);
-    const [traverseProducts, setTraverseProducts] = useState([]);
 
-    console.log(categoreySnipe)
-    // if(categoreySnipe === undefined){
-    //     categoreySnipe = "men";
-    //     console.log("is null")
-    // }
+    const [products, setProducts] = useState([]);
+    const [filteredProducts, setFilteredProducts] = useState([]);
+
+
 
     useEffect(() => {
         
         const findProducts = async ()=>{
             try{
-                const response = await axios.get( categoreySnipe ? `${infoRequests}products?category=${categoreySnipe}`: BASE_URL + "products")
+                const response = await axios.get( cat ? `${infoRequests}products?category=${cat}`: BASE_URL + "products")
 
-                setProductMatch(response.data);
+                setProducts(response.data);
             }catch(err){
 
             }
         }
         findProducts()
-    }, [categoreySnipe]);
+    }, [cat]);
 
 
 
 
     useEffect (() =>{
-        categoreySnipe &&
-        setTraverseProducts(
-            productMatch.filter((item) => Object.entries(itemFinder).every(([key,value])=>
+        cat &&
+        setFilteredProducts(
+            products.filter((item) => Object.entries(filters).every(([key,value])=>
             item[key].includes(value)
             )
         )
     
     );
 
-    },[productMatch,categoreySnipe,itemFinder])
+    },[products,cat,filters])
 
 
     useEffect(()=>{
-        if(displayedData === "latest"){
-            setTraverseProducts((change) => [...change].sort((a,b) => a.createdAt - b.createdAt));
-        }else if(displayedData ==="highest"){
-            setTraverseProducts((change) => [...change].sort((a,b) => b.price - a.price));
+        if(sort === "latest"){
+            setFilteredProducts((change) => [...change].sort((a,b) => a.createdAt - b.createdAt));
+        }else if(sort ==="highest"){
+            setFilteredProducts((change) => [...change].sort((a,b) => b.price - a.price));
         }else{
-            setTraverseProducts((change) => [...change].sort((a,b) => a.price - b.price));
+            setFilteredProducts((change) => [...change].sort((a,b) => a.price - b.price));
         }
-    }, [displayedData]);
+    }, [sort]);
 
-
-console.log(productMatch)
 
     return (
         <Container>
-           { categoreySnipe ? traverseProducts.map(item=>
+           { cat ? filteredProducts.map(item=>
            <Product item = {item} key = {item._id} />
-           ):productMatch.slice(0,8).map((item) => <Product item = {item} key = {item._id} />)} 
+           ):products.slice(0,8).map((item) => <Product item = {item} key = {item._id} />)} 
         </Container>
     )
 }
