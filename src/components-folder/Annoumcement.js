@@ -17,7 +17,7 @@ font-weight: bold;
 const Annoumcement = () => {
     return (
         <Container>
-            Holiday Sale!!!!
+            Holiday Sale & Free Shipping!!!!
         </Container>
     )
 }

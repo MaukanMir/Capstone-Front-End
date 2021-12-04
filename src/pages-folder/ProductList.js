@@ -48,7 +48,7 @@ const ProductList = () => {
 
     const cat = location.pathname.split("/")[2];
     const [filters, setFilters] = useState({});
-    const [sort, setSort] = useState("newest");
+    const [sort, setSort] = useState("latest");
 
 
     const handleFilters = (e) => {

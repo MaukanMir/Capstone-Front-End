@@ -278,7 +278,7 @@ const Cart = () => {
                 <SummaryItem>
                     <SummaryItemText>Shipping Discount</SummaryItemText>
 
-                    <SummaryItemPrice> {(cart.total).toFixed(2)}</SummaryItemPrice>
+                    <SummaryItemPrice>$ -9.99</SummaryItemPrice>
                 </SummaryItem>
                 <SummaryItem>
                     <SummaryItemText type = "total">Total</SummaryItemText>
