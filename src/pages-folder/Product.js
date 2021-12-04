@@ -202,12 +202,12 @@ const Product = () => {
             <Price> {stateProduct.price}</Price>
             <FilterContainer>
                 <Filter>
-                    <FilterTitle>color</FilterTitle>
+                    
                      
                     <FilterColor onClick = {()=>setColor(color)} /> 
                 </Filter>
                  <Filter>
-                    {/* <FilterTitle>Size</FilterTitle>
+                    <FilterTitle>Size</FilterTitle>
                     <FilterSize onChange ={(e)=>setSize(e.target.value)}>
                     <FilterSizeOption>S</FilterSizeOption>
                     <FilterSizeOption>M</FilterSizeOption>
@@ -215,7 +215,7 @@ const Product = () => {
                     <FilterSizeOption>XL</FilterSizeOption>
                     
                     </FilterSize>
-                    */}
+                   
                 </Filter>
             </FilterContainer>
             <AddContainer>
