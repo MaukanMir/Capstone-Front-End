@@ -211,7 +211,7 @@ const Cart = () => {
 
   }, [stripeToken, cart.total, navigate]);
 
-  if(parseFloat((cart.total).toFixed(2)) > 49 ?  cart.total = parseFloat((cart.total).toFixed(2)) -9.99: cart.total = parseFloat((cart.total).toFixed(2)))
+  
   // const handleClick = () =>{
   //     dispatch(
   //       removeProduct({})
@@ -277,6 +277,7 @@ const Cart = () => {
                 </SummaryItem>
                 <SummaryItem>
                     <SummaryItemText>Shipping Discount</SummaryItemText>
+                    {(parseFloat((cart.total).toFixed(2)) > 49 ?  cart.total = parseFloat((cart.total).toFixed(2)) -9.99: cart.total = parseFloat((cart.total).toFixed(2)))}
                     <SummaryItemPrice> {cart.total > 49 ? "$ - 9.99" : "$ -0.00"} </SummaryItemPrice>
                 </SummaryItem>
                 <SummaryItem>
