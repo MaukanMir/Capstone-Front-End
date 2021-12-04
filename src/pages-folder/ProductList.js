@@ -49,7 +49,7 @@ const ProductList = () => {
     const [sort, setSort] = useState("latest");
 
     console.log(cat)
-    
+
     const handleFilters = (e) => {
     const value = e.target.value;
     setFilters({
@@ -66,7 +66,7 @@ const ProductList = () => {
             <Title>{cat}</Title>
             <FilterContainer>
                 <Filter><FilterText> Find the right styles: </FilterText>
-                <Select name ="color" onChange = {handleFilters}>
+                {/* <Select name ="color" onChange = {handleFilters}>
                 <Option disabled >Color</Option>
                 <Option>white</Option>
                 <Option>black</Option>
@@ -74,10 +74,9 @@ const ProductList = () => {
                 <Option>blue</Option>
                 <Option>yellow</Option>
                 <Option>green</Option> 
-            </Select>
+            </Select> */}
             <Select name ="size" onChange = {handleFilters}>
             <Option disabled >Size</Option>
-            <Option>XS</Option>
             <Option>S</Option>
             <Option>M</Option>
             <Option>L</Option>
