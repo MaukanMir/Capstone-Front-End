@@ -211,7 +211,7 @@ const Cart = () => {
 
   }, [stripeToken, cart.total, navigate]);
 
-
+  if(parseFloat((cart.total).toFixed(2)) > 49 ?  cart.total = parseFloat((cart.total).toFixed(2)) -9.99: cart.total = parseFloat((cart.total).toFixed(2)))
   // const handleClick = () =>{
   //     dispatch(
   //       removeProduct({})
@@ -277,11 +277,11 @@ const Cart = () => {
                 </SummaryItem>
                 <SummaryItem>
                     <SummaryItemText>Shipping Discount</SummaryItemText>
-                    <SummaryItemPrice> {cart.total > 0 ? cart.total - 9.99 : "$ -0.00"} </SummaryItemPrice>
+                    <SummaryItemPrice> {cart.total > 49 ? "$ - 9.99" : "$ -0.00"} </SummaryItemPrice>
                 </SummaryItem>
                 <SummaryItem>
                     <SummaryItemText type = "total">Total</SummaryItemText>
-                    <SummaryItemPrice>{(cart.total).toFixed(2)} </SummaryItemPrice>
+                    <SummaryItemPrice>{parseFloat((cart.total).toFixed(2))} </SummaryItemPrice>
                 </SummaryItem>
                 <StripeCheckout 
                 name="Thrift IT"
