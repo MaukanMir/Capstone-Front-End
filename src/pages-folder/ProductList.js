@@ -75,12 +75,12 @@ const ProductList = () => {
                 <Option>yellow</Option>
                 <Option>green</Option> 
             </Select> */}
-            <Select name ="size" onChange = {handleFilters}>
+            {/* <Select name ="size" onChange = {handleFilters}>
             <Option disabled >Size</Option>
             <Option>S</Option>
             <Option>M</Option>
             <Option>L</Option>
-          </Select>
+          </Select> */}
           </Filter>
                 <Filter> 
                 <FilterText>Organize by Feature:</FilterText>
