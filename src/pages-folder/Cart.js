@@ -277,8 +277,8 @@ const Cart = () => {
                 </SummaryItem>
                 <SummaryItem>
                     <SummaryItemText>Shipping Discount</SummaryItemText>
-                    {(parseFloat((cart.total).toFixed(2)) > 49 ?  cart.total = parseFloat((cart.total).toFixed(2)) -9.99: cart.total = parseFloat((cart.total).toFixed(2)))}
-                    <SummaryItemPrice> {cart.total > 49 ? "$ - 9.99" : "$ -0.00"} </SummaryItemPrice>
+
+                    <SummaryItemPrice> {(cart.total).toFixed(2)}</SummaryItemPrice>
                 </SummaryItem>
                 <SummaryItem>
                     <SummaryItemText type = "total">Total</SummaryItemText>
