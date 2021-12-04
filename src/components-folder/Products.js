@@ -26,7 +26,7 @@ const Products = ({  cat, filters, sort }) => {
         
         const findProducts = async ()=>{
             try{
-                const response = await axios.get( cat ? `${infoRequests}products?category=${cat}`: BASE_URL + "products")
+                const response = await axios.get( cat ? `${BASE_URL}products?category=${cat}`: BASE_URL + "products")
 
                 setProducts(response.data);
             }catch(err){
