@@ -6,7 +6,7 @@ import Newsletter from '../components-folder/Newsletter';
 import Footer from '../components-folder/Footer';
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
-import { mobile } from '../responsive';
+
 import { infoRequests, BASE_URL } from '../CleanMethods';
 import { useEffect } from 'react';
 import { useState } from 'react';
@@ -21,7 +21,7 @@ const Container = styled.div``;
 const Wrapper = styled.div`
 display:flex;
 padding:50px;
-${mobile({ padding: "10px", flexDirection:"column" })}
+
 `;
 const ImgContainer = styled.div`
 flex:1;
@@ -30,14 +30,14 @@ flex:1;
 const InfoContainer = styled.div`
 flex:1;
 padding:  0px 50px;
- ${mobile({ padding: "10px" })};
+
 `;
 const Image = styled.img`
 width:100%;
 height: 90vh;
 object-fit: cover;
 border-radius: 15px;
- ${mobile({ height: "40vh" })}
+
 `;
 const Title = styled.h1`
 font-weight:200px;
@@ -54,7 +54,7 @@ margin: 30px 0px;
 width:50%;
 display: flex;
 justify-content: space-between;
- ${mobile({ width: "100%" })};
+
 `;
 
 const Filter = styled.div`
@@ -92,7 +92,7 @@ width: 50%;
 display: flex;
 align-items: center;
 justify-content: space-between;
- ${mobile({ width: "100%" })};
+
 `;
 
 const AmountContainer = styled.div`

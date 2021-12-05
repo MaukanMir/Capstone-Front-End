@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { mobile } from '../responsive';
+
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -20,7 +20,7 @@ const Wrapper = styled.div`
 padding: 20px;
 width: 25%;
 background-color: white;
- ${mobile({ width: "75%" })}
+
 `;
 
 const Form = styled.form`

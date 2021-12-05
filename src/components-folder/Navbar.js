@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import SearchIcon from '@material-ui/icons/Search';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import Badge from '@material-ui/core/Badge';
-import {mobile} from "../responsive";
+
 import {useSelector} from "react-redux";
 import { Link } from 'react-router-dom';
 import {Navigate} from "react-router-dom";
@@ -12,14 +12,14 @@ import {Navigate} from "react-router-dom";
 //LEFT SIDE START
 const Container = styled.div`
 height: 60px;
- ${mobile({ height: "50px" })}
+
 `
 const Wrapper = styled.div`
 padding:10px 20px;
 display: flex;
 align-items: center;
 justify-content: space-between;
-${mobile({ padding: "10px 0px" })}
+
 `
 const Left = styled.div `
 flex:1;
@@ -35,11 +35,11 @@ flex:1;
 display: flex;
 align-items: center;
 justify-content: flex-end;
- ${mobile({ flex: 2, justifyContent: "center" })};
+
 `
 const Input = styled.input`
 border: none;
-${mobile({width: "50px"})}
+
 `
 //RIGHT SIDE END
 //CENTER START
@@ -49,7 +49,7 @@ text-align: center;
 `
 const Logo = styled.div `
 font-weight: bold;
-${mobile({fontSize: "24px"})}
+
 `
 
 // Style Components END
@@ -59,7 +59,7 @@ font-size: 14px;
 cursor: pointer;
 margin-left:25px;
 margin-top: 5px;
-${mobile({ fontSize: "12px", marginLeft: "10px" })}
+
 `
 const Navbar = () => {
     const got = "Sign In";

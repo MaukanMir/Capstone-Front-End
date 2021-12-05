@@ -7,7 +7,7 @@ import PinterestIcon from '@material-ui/icons/Pinterest';
 import RoomIcon from '@material-ui/icons/Room';
 import PhoneInTalkIcon from '@material-ui/icons/PhoneInTalk';
 import MailOutline from '@material-ui/icons/MailOutline';
-import { mobile } from '../responsive';
+import { BASE_URL } from '../CleanMethods';
 import { Link } from 'react-router-dom';
 
 const Container = styled.div`
@@ -137,11 +137,9 @@ const Footer = () => {
             <ListItem style ={{color:"#FE9B0A"}}> Cart </ListItem>
             </Link>
        
-            <ListItem> Mens Clothing </ListItem>
+             <Link style ={{textDecoration:"none"}} to = {`${BASE_URL}products?category=men`} > <ListItem style ={{color:"#FE9B0A"}}> Mens Clothing </ListItem> </Link>
           
-            <ListItem>Womens Clothing</ListItem>
-          
-            
+            <Link style ={{textDecoration:"none"}} to = {`${BASE_URL}products?category=women`} > <ListItem style ={{color:"#FE9B0A"}}>Womens Clothing</ListItem> </Link>
             
             <Link style ={{textDecoration:"none"}} to ="/accountInfo"> <ListItem style ={{color:"#FE9B0A"}}>Account Information</ListItem> </Link>
             

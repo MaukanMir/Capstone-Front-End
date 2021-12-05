@@ -1,3 +1,4 @@
+//Slider items information here, dynamically add items
 export const sliderItems = [
     {
       id: 1,

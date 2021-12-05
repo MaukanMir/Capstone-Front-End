@@ -4,9 +4,10 @@ import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import { useState } from 'react';
 import { categories, sliderItems } from '../data';
-import { mobile } from '../responsive';
+
 import {Link} from "react-router-dom"
 import Categories from './Categories';
+
 const Container = styled.div `
 width:100%;
 height: 100vh;
