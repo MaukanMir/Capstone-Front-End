@@ -137,9 +137,9 @@ const Footer = () => {
             <ListItem style ={{color:"#FE9B0A"}}> Cart </ListItem>
             </Link>
        
-             <Link style ={{textDecoration:"none"}} to = {`${BASE_URL}products?category=men`} > <ListItem style ={{color:"#FE9B0A"}}> Mens Clothing </ListItem> </Link>
+             <Link style ={{textDecoration:"none"}} to = "/products/men" > <ListItem style ={{color:"#FE9B0A"}}> Mens Clothing </ListItem> </Link>
           
-            <Link style ={{textDecoration:"none"}} to = {`${BASE_URL}products?category=women`} > <ListItem style ={{color:"#FE9B0A"}}>Womens Clothing</ListItem> </Link>
+            <Link style ={{textDecoration:"none"}} to = "/products/women" > <ListItem style ={{color:"#FE9B0A"}}>Womens Clothing</ListItem> </Link>
             
             <Link style ={{textDecoration:"none"}} to ="/accountInfo"> <ListItem style ={{color:"#FE9B0A"}}>Account Information</ListItem> </Link>
             
