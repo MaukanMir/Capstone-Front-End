@@ -75,7 +75,7 @@ const Register = () => {
                 <Aggrement>
                     I hearby agree to the terms and conditions of the site.
                 </Aggrement>
-                <Link to ="/"> <Button>Create</Button> </Link>
+                <Link to ="/login"> <Button>Create</Button> </Link>
             </Form>
         </Wrapper>
 

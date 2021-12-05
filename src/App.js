@@ -44,9 +44,9 @@ function App() {
 
 
 
-    <Routes>
-    <Route path ="/register" element ={ user ?  <Navigate to = "/"/> :  <Register/>}  /> 
-   </Routes>
+    {/* <Routes>
+    <Route path ="/register" element ={ user ?  <Navigate to = "/login"/> :  <Register/>}  /> 
+   </Routes> */}
 
    <Routes>
   <Route path ="/wishlist" element ={<WishList/>}  /> 

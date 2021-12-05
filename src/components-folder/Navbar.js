@@ -84,9 +84,9 @@ const Navbar = () => {
 
              <Link style = {{textDecoration:"none"}}  to ="/products/men"> <MenuItem style= {{color:"#6a5acd"}}> Products </MenuItem> </Link>
 
-            <Link style = {{textDecoration:"none"}} to ="/register">
+            {/* <Link style = {{textDecoration:"none"}} to ="/register">
                 <MenuItem style= { user ? {display:"none"} : {color:"#6a5acd"} } >Register</MenuItem>
-                </Link>
+                </Link> */}
 
                 <Link style = {{textDecoration:"none"}} to ="/login"> 
                 <MenuItem style= { user ? {display:"none"} : {color:"#6a5acd"} } >Sign In</MenuItem>
