@@ -8,7 +8,7 @@ import { useDispatch } from 'react-redux';
 import Footer from '../components-folder/Footer';
 const Container = styled.div`
 color: #FE9B0A;
-height: 100vh;
+
 `;
 const Header = styled.h1`
 display: flex;
@@ -23,6 +23,7 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 background-color:black;
+height: 100vh;
 `
 const Title = styled.h1`
 margin: 10px 0px;
