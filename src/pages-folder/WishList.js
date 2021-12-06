@@ -23,7 +23,7 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 background-color:black;
-height: 100vh;
+height: 50vh;
 `
 const Title = styled.h1`
 margin: 10px 0px;
