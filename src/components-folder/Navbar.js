@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import SearchIcon from '@material-ui/icons/Search';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import Badge from '@material-ui/core/Badge';
-
 import {useSelector} from "react-redux";
 import { Link } from 'react-router-dom';
 import {Navigate} from "react-router-dom";

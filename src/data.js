@@ -3,7 +3,7 @@ export const sliderItems = [
     {
       id: 1,
       img: "https://images.pexels.com/photos/1055691/pexels-photo-1055691.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-      title: "Bundle up in stlye!",
+      title: "Bundle up in style!",
       desc: "With these prices, you can't afford to miss out!",
       bg: "#FE9B0A",
     },
@@ -11,7 +11,7 @@ export const sliderItems = [
       id: 2,
       img: "https://images.pexels.com/photos/1661416/pexels-photo-1661416.jpeg?cs=srgb&dl=pexels-bogdan-glisik-1661416.jpg&fm=jpg",
       title: "Office Collection!",
-      desc: "Office stlye that will turn heads!",
+      desc: "Office style that will turn heads!",
       bg: "#94DEC0",
     },
     {
