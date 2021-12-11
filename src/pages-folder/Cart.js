@@ -282,8 +282,9 @@ const Cart = () => {
                 </SummaryItem>
                 <SummaryItem>
                     <SummaryItemText type = "total">Total</SummaryItemText>
-                    <SummaryItemPrice>{parseFloat((cart.total).toFixed(2))} </SummaryItemPrice>
+                    <SummaryItemPrice>${parseFloat((cart.total).toFixed(2))} </SummaryItemPrice>
                 </SummaryItem>
+                
                 <StripeCheckout
                 name="Thrift IT"
                 image="https://images.squarespace-cdn.com/content/v1/5d210a3c8ae83700013f313b/1563468167499-UMAV5PXWBLI3VD042R98/Screen+Shot+2019-07-18+at+12.41.57+PM.png?format=2500w"
@@ -295,6 +296,7 @@ const Cart = () => {
                 stripeKey={KEY}> 
             
                 </StripeCheckout>
+  
                  </Summary>
             </Bottom>
             </Wrapper>
