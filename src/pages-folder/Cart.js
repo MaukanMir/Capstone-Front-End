@@ -282,7 +282,7 @@ const Cart = () => {
                 </SummaryItem>
                 <SummaryItem>
                     <SummaryItemText type = "total">Total</SummaryItemText>
-                    <SummaryItemPrice>${parseFloat((cart.total).toFixed(2))} </SummaryItemPrice>
+                    <SummaryItemPrice>$ {parseFloat((cart.total).toFixed(2))} </SummaryItemPrice>
                 </SummaryItem>
                 
                 <StripeCheckout
